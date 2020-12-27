@@ -1,3 +1,6 @@
+/*
+* 反转一个单链表.
+*/
 #include <stdio.h>
 #include <string.h>
 #include "listdemo.h"
