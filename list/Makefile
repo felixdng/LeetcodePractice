@@ -32,7 +32,7 @@ TARGETS=$(patsubst %.o,%,$(notdir $(OBJ_MAIN)))
 #$(info "[TARGETS] $(TARGETS)")
 
 CC=gcc
-CFLAGS=-Wall -Wno-error -I$(TOP_DIR)/$(INC_DIR)
+CFLAGS=-Wall -Werror -I$(TOP_DIR)/$(INC_DIR)
 ifeq ($(debug),)
 CFLAGS+=-O2
 else
