@@ -19,6 +19,8 @@ extern "C" {
 slist_t * demo_list_create(const char *str, slist_t *lh);
 void demo_list_destroy(slist_t *lh);
 void demo_list_print(slist_t *lh);
+slist_t * demo_list_node_new(long long int val, slist_t *next);
+slist_t * demo_list_node_new_tail(long long int val, slist_t *prev);
 
 #ifdef __cplusplus
 }

@@ -66,3 +66,22 @@ void demo_list_print(slist_t *lh)
 	printf("]\n");
 }
 
+slist_t * demo_list_node_new(long long int val, slist_t *next)
+{
+	listnode_t *node = (listnode_t *)calloc(1, sizeof(listnode_t));
+	if (NULL == node) {
+		ERR("calloc failed!");
+		return NULL;
+	}
+	node->val = val;
+	node->list.next = next;
+	return TO_SLIST(node);
+}
+
+slist_t * demo_list_node_new_tail(long long int val, slist_t *prev)
+{
+	slist_t *node = demo_list_node_new(val, NULL);
+	if (prev)
+		slist_add(node, prev);
+	return node;
+}
